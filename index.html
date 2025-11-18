@@ -143,6 +143,30 @@ footer {
     margin-top: 2.2rem;
   }
 }
+
+/* Firefox Mobile Optimization */
+@media (max-width: 768px) {
+  /* Force darker text rendering */
+  body {
+    color: #000000;  /* Pure black instead of dark gray */
+    font-weight: 450;  /* Slightly heavier weight */
+    -moz-osx-font-smoothing: auto;  /* Disable grayscale smoothing */
+  }
+  
+  /* Darken section titles for contrast */
+  h2.section-title {
+    color: #0a2a4a;  /* Darker navy */
+    font-weight: 600;  /* Bolder */
+  }
+  
+  /* Ensure links remain visible */
+  a {
+    color: #0a2a4a;
+    border-bottom-width: 2px;  /* Thicker underline */
+  }
+}
+
+  
 </style>
 </head>
 <body>
@@ -250,5 +274,6 @@ footer {
 </body>
 
 </html>
+
 
 
