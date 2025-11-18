@@ -144,25 +144,23 @@ footer {
   }
 }
 
-/* Firefox Mobile Optimization */
 @media (max-width: 768px) {
-  /* Force darker text rendering */
   body {
-    color: #000000;  /* Pure black instead of dark gray */
-    font-weight: 450;  /* Slightly heavier weight */
-    -moz-osx-font-smoothing: auto;  /* Disable grayscale smoothing */
+    color: #0d0d0d;          /* Darker than #1a1a1a, but not pure black */
+    font-weight: 500;         /* Medium weight for clearer strokes */
+    font-size: 1.02rem;       /* Slightly larger base text */
+    text-rendering: optimizeLegibility;  /* Hint Firefox's rasterizer */
   }
   
-  /* Darken section titles for contrast */
   h2.section-title {
-    color: #0a2a4a;  /* Darker navy */
-    font-weight: 600;  /* Bolder */
+    font-weight: 700;         /* Bold section titles */
+    color: #0a2a4a;           /* Darker navy */
+    letter-spacing: 1.2px;    /* Tighter spacing for uppercase */
   }
   
-  /* Ensure links remain visible */
   a {
-    color: #0a2a4a;
-    border-bottom-width: 2px;  /* Thicker underline */
+    font-weight: 500;         /* Ensure links aren't too light */
+    border-bottom-width: 2px;
   }
 }
 
@@ -274,6 +272,7 @@ footer {
 </body>
 
 </html>
+
 
 
 
