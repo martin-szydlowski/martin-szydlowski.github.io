@@ -7,38 +7,39 @@
 <style>
 /* ---------- Base Styling ---------- */
 body {
-  font-family: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1a1a1a; /* Darker, more explicit black */
   background: #ffffff;
   margin: 0;
-  line-height: 1.65;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility; /* Better text rendering */
 }
 
 /* ---------- Layout ---------- */
 main {
-  max-width: 880px;
-  margin: 3.5rem auto;
-  padding: 0 2.5rem 3.5rem 2.5rem;
-  border-left: 4px solid #0d3b66;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 2rem 3rem 2rem;
+  border-left: 5px solid #0d3b66;
 }
 
 /* ---------- Header ---------- */
 header {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   gap: 2.5rem;
 }
 header img {
-  width: 160px;
-  height: 210px;
+  width: 170px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 3px;
-  background: #f0f0f0;
-  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  background: #eee;
+  border: 1px solid #ccc;
   flex-shrink: 0;
 }
 header div {
@@ -47,124 +48,104 @@ header div {
 }
 header h1 {
   color: #0d3b66;
-  font-size: 1.95rem;
+  font-size: 2rem;
   margin: 0;
-  font-weight: 600;
-  letter-spacing: -0.3px;
+  font-weight: 600; /* Explicit weight */
 }
 header h2 {
-  font-weight: 400;
-  color: #333;
-  margin: 0.3rem 0;
-  font-size: 1.05rem;
+  font-weight: 400; /* Explicit normal weight */
+  color: #2a2a2a; /* Darker grey */
+  margin: 0.4rem 0;
 }
 header p {
-  margin-top: 0.8rem;
-  font-size: 0.95rem;
+  margin-top: 0.6rem;
+  color: #1a1a1a; /* Explicit dark color */
 }
 header a {
   color: #0d3b66;
   text-decoration: none;
-  border-bottom: 1px solid rgba(13, 59, 102, 0.3);
-  transition: border-bottom 0.15s ease;
+  border-bottom: 1px solid transparent;
 }
 header a:hover {
   border-bottom: 1px solid #0d3b66;
 }
 
-/* ---------- Section Titles ---------- */
+/* ---------- ENHANCED Section Titles ---------- */
 h2.section-title {
   text-transform: uppercase;
   color: #0d3b66;
-  font-size: 1rem;
-  letter-spacing: 1.5px;
-  margin-top: 2.8rem;
+  font-size: 0.95rem;
+  letter-spacing: 1.2px;
+  margin-top: 2.5rem;
   margin-bottom: 0.8rem;
-  border-top: 1px solid #e5e5e5;
-  padding-top: 1.4rem;
+  border-top: 1px solid #d0d0d0; /* Slightly darker border */
+  padding-top: 1.5rem;
   font-weight: 600;
 }
 
-/* ---------- Content ---------- */
-section p, section li {
-  font-size: 0.97rem;
+/* ---------- Content Text ---------- */
+p, li {
+  color: #1a1a1a; /* Explicit dark text color */
+  font-weight: 400; /* Normal weight */
 }
 
+/* ---------- Lists ---------- */
 ul {
   list-style: none;
   padding-left: 0;
 }
 li {
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.9rem;
 }
 
 /* ---------- Links ---------- */
 a {
   color: #0d3b66;
   text-decoration: none;
-  border-bottom: 1px solid rgba(13, 59, 102, 0.25);
-  transition: border-bottom 0.15s ease, color 0.15s ease;
+  font-weight: 400; /* Ensure links have normal weight */
 }
 a:hover {
-  color: #0a2a4a;
   border-bottom: 1px solid #0d3b66;
+}
+
+/* ---------- Strong text ---------- */
+strong {
+  font-weight: 600; /* Explicit bold weight */
+  color: #1a1a1a;
 }
 
 /* ---------- Footer ---------- */
 footer {
   text-align: center;
-  color: #777;
-  margin-top: 3.5rem;
-  font-size: 0.85rem;
-  border-top: 1px solid #e5e5e5;
-  padding-top: 1.2rem;
+  color: #666; /* Darker grey for better readability */
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #d0d0d0;
+  padding-top: 1rem;
   font-weight: 400;
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 680px) {
+@media (max-width: 650px) {
   header {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    gap: 1.8rem;
   }
   header div {
     text-align: center;
   }
   main {
     border-left: none;
-    border-top: 4px solid #0d3b66;
-    padding-top: 2.5rem;
-    margin: 2.5rem auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    border-top: 5px solid #0d3b66;
+    padding-top: 2rem;
   }
-  h2.section-title {
-    margin-top: 2.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    color: #000000;          /* Darker than #1a1a1a, but not pure black */
-    font-weight: 450;         /* Medium weight for clearer strokes */
-    font-size: 1.02rem;       /* Slightly larger base text */
-    text-rendering: optimizeLegibility;  /* Hint Firefox's rasterizer */
-  }
-
-  h2.section-title {
-    font-weight: 700;         /* Bold section titles */
-    color: #0a2a4a;           /* Darker navy */
-    letter-spacing: 1.2px;    /* Tighter spacing for uppercase */
-  }
-
-  a {
-    font-weight: 500;         /* Ensure links aren't too light */
-    border-bottom-width: 2px;
-  }
-}
-
   
+  /* Ensure good contrast on mobile */
+  body {
+    -webkit-text-size-adjust: 100%; /* Prevent font size adjustments */
+  }
+}
 </style>
 </head>
 <body>
@@ -272,6 +253,7 @@ footer {
 </body>
 
 </html>
+
 
 
 
